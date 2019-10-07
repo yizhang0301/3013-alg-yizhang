@@ -266,7 +266,7 @@ int main(int argc, char** argv) {
 	}
 
 
-	AH.PrintAnimals();
+	A.PrintAnimals();
 
 	return 0;
 }
