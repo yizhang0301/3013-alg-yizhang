@@ -1,4 +1,17 @@
-
+///////////////////////////////////////////////////////////////////////////////
+//                   
+// Author:           YI ZHANG
+// Email:            zy19950301@126.com
+// Label:            PO2
+// Title:            Resizing the Stack
+// Course:           3013-alg
+// Semester:         Spring 2020
+//
+// Description:  json
+//       
+//
+// Files:  main.cpp          
+/////////////////////////////////////////////////////////////////////////////////
 #include <fstream>
 #include <iostream>
 #include "JsonFacade.hpp"       
