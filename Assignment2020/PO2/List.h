@@ -47,7 +47,7 @@ public:
 	}
 
 	/**
-	 * Public : insert(string W, string D)
+	 * Public : insert a b
 	 *
 	 * Description:get a new node
 	 * Params:string a b
@@ -79,7 +79,7 @@ public:
 	}
 
 	/**
-	 * Public: search(string input)
+	 * Public: search
 	 *
 	 * Description:looking and string list
 	 * Params:string input		
