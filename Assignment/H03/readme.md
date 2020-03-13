@@ -7,7 +7,7 @@ O(1),O(logn),O(n),O(nlogn),O(n2),O(n!)
 
 
 - Complexities : **O(1), O(n log n), O(n), O(n<sup>2</sup>), O(log n), O(n!) , O(h)**
-- 1) Finding the max element in an unordered stack would require _____________ operations?
+- 1) Finding the max element in an unordered stack would require _____________ operations? O(n)
 - 2) Finding the min element in an unordered queue would require _____________ operations?
 - 3) Finding some element in some Binary Search Tree would require _____________ operations?
 - 4) Finding some element in a balanced Binary Search Tree would require _____________ operations?
