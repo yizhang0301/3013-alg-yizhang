@@ -1,3 +1,21 @@
+///////////////////////////////////////////////////////////////////////////////
+//                   
+// Author:           YI ZHANG
+// Email:            zy19950301@126.com
+// Label:            459
+// Title:            Graph Connectivity
+// Course:           3013-alg
+// Semester:         Spring 2020
+//
+// Description:  Consider a graph G formed from a large number of nodes connected by
+//edges. G is said to be connected if a path can be found in 0 or more steps
+//between any pair of nodes in G. For example, the graph below is not
+//connected because there is no path from A to C.
+//
+//       
+//
+// Files:  main.cpp          
+/////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include <string>
 #include <vector>
