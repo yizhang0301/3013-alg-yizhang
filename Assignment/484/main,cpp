@@ -1,0 +1,25 @@
+#include <iostream>
+#include <map>
+#include <vector>
+ 
+using namespace std;
+ 
+int main()
+{
+    map<int, int> m;
+    vector<int> v;
+    int a;
+ 
+    while(cin >> a) {
+        if(m.find(a) == m.end()) {
+            m.insert(make_pair(a, 1));
+            v.push_back(a);
+        } else
+            m[a]++;
+    }
+ 
+    for(int i=0; i<(int)v.size(); i++)
+        cout << v[i] << " " << m[v[i]] << endl;
+ 
+    return 0;
+}
