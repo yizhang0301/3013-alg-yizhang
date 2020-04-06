@@ -97,7 +97,7 @@ void graph::output()
     for(int i=1;i<=limit;i++)
         if(uf.root[i])
         count++;
-    printf("%d\n",count);
+    printf(count);
 
 
 }
@@ -106,8 +106,7 @@ int main()
     int cas;
     graph gh;
 
-
-    scanf("%d",&cas);
+  
     getchar();
     getchar();
     while(cas--)
