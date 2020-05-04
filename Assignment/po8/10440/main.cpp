@@ -1,4 +1,18 @@
-
+///////////////////////////////////////////////////////////////////////////////
+//                   
+// Author:           YI ZHANG
+// Email:            zy19950301@126.com
+// Label:            10440
+// Title:            Graph Connectivity
+// Course:           3013-alg
+// Semester:         Spring 2020
+//
+// Description:   A greedy approach to ferryiing cars across a river.
+//
+//       
+//
+// Files:  main.cpp          
+/////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include <cstdio>
 #include <cstring>
