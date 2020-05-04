@@ -3,7 +3,7 @@
 // Author:           YI ZHANG
 // Email:            zy19950301@126.com
 // Label:            10440
-// Title:            Graph Connectivity
+// Title:            Ferry Loading
 // Course:           3013-alg
 // Semester:         Spring 2020
 //
