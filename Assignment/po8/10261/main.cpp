@@ -1,3 +1,18 @@
+///////////////////////////////////////////////////////////////////////////////
+//                   
+// Author:           YI ZHANG
+// Email:            zy19950301@126.com
+// Label:            10261
+// Title:            Graph Connectivity
+// Course:           3013-alg
+// Semester:         Spring 2020
+//
+// Description:  A dynamic programming problem similar to the knapsack problem.
+//
+//       
+//
+// Files:  main.cpp          
+/////////////////////////////////////////////////////////////////////////////////
 #include <iostream>  
 #include <string.h>  
 #include <stdio.h>  
