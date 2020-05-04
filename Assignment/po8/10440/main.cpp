@@ -64,3 +64,10 @@ void Ferry::process(){
         cout<<ansTime<<" "<<ansNum<<endl;
     }
 
+int main()
+{
+    Ferry ferry;
+    ferry.process();
+    return 0;
+
+}
