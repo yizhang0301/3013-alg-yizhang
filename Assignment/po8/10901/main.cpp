@@ -1,3 +1,18 @@
+ ///////////////////////////////////////////////////////////////////////////////
+//                   
+// Author:           YI ZHANG
+// Email:            zy19950301@126.com
+// Label:            10901
+// Title:            Ferry Loading
+// Course:           3013-alg
+// Semester:         Spring 2020
+//
+// Description:  A queue based approach to solving this problem.
+//
+//       
+//
+// Files:  main.cpp          
+/////////////////////////////////////////////////////////////////////////////////
 #include <climits>
 #include <string>
 #include <iostream>
