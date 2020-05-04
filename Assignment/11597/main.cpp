@@ -18,9 +18,9 @@ using namespace std;
 
 int main() {
 	int numV; 
-  int sum; 
-  int subtree;
-  int value;
+ 	int sum; 
+ 	int subtree;
+  	int value;
 	int numC = 1;								
 	cin >> numV;							
 
@@ -29,7 +29,7 @@ int main() {
 		sum = (numV * value) / 2;	
 		subtree = sum / value;		
 		cout << "Case " << numC << ": " << subtree << endl; 
-    numC++;								
+    		numC++;								
 		cin >> numV;					
 	}
 	return 0;
