@@ -47,36 +47,10 @@ int A[100];     //array of 100 integers
 struct Node {
     int x;          //int value of node
     Node *next;     //pointer to point to another node
-    /**
-     * Public: Node()
-     * 
-     * Description:
-     *      this is a default constructor thata sets defaults for the nodes 
-     *      value and pointer
-     * 
-     * Params:
-     *      None
-     * 
-     * Returns:
-     *      None
-     */
     Node() {
         x = -1;
         next = NULL;
     }
-    /**
-     * Public: Node(int n)
-     * 
-     * Description:
-     *      This is a perameterized constructor that takes in an int to store 
-     *      it in a node
-     * 
-     * Params:
-     *      int     :   value to store in node
-     * 
-     * Returns:
-     *      None
-     */
     Node(int n) {
         x = n;
         next = NULL;
@@ -126,35 +100,10 @@ private:
     int Size;       //int for size of list
 
 public:
-    /**
-     * Public: List()
-     * 
-     * Description:
-     *      Default constructor that makes a list of NULL and sets size to 0
-     * 
-     * Params:
-     *      None
-     * 
-     * Returns:
-     *      None
-     */
     List() {
         Head = Tail = NULL;
         Size = 0;
     }
-
-    /**
-     * Public: Push(int val)
-     * 
-     * Description:
-     *      Pushes a value to the end of the list
-     * 
-     * Params:
-     *      int val     //a value to put into the node
-     * 
-     * Returns:
-     *      None
-     */
     void Push(int val) {
         // allocate new memory and init node
         Node *Temp = new Node(val);
