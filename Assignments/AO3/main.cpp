@@ -15,25 +15,69 @@
 //
 // Files:  main.cpp          
 /////////////////////////////////////////////////////////////////////////////////
-
 #include <iostream>
 
-using namespace std;
+int A[100];     //array of 100 integers
 
-int A[100];
-struct Node
-{
-    int x;
-    Node *next;
-    //default constructor
-    Node()
-    {
+/**
+ * Node
+ * 
+ * Description:
+ *      makes a structured node with a int value and a pointer to a node type
+ * 
+ * Public Methods:
+ *      int     x;
+ *      Node    *next;
+ *              Node()
+ *              Node(int n)
+ * 
+ * Usage: 
+ * 
+ *      Node N1;        //makes a node that points to NULL and sets its stored
+ *                      //value to -1
+ *                     
+ *                      //or
+ * 
+ *      Node N2(5)      //makes a node that points to NULL and sets its stored
+ *                      //value to 5
+ *      N2.next = NULL  //sets the next pointer in the node to NULL
+ *      
+ *      
+ */
+struct Node {
+    int x;          //int value of node
+    Node *next;     //pointer to point to another node
+    /**
+     * Public: Node()
+     * 
+     * Description:
+     *      this is a default constructor thata sets defaults for the nodes 
+     *      value and pointer
+     * 
+     * Params:
+     *      None
+     * 
+     * Returns:
+     *      None
+     */
+    Node() {
         x = -1;
         next = NULL;
     }
-    //constructor with specified number
-    Node(int n)
-    {
+    /**
+     * Public: Node(int n)
+     * 
+     * Description:
+     *      This is a perameterized constructor that takes in an int to store 
+     *      it in a node
+     * 
+     * Params:
+     *      int     :   value to store in node
+     * 
+     * Returns:
+     *      None
+     */
+    Node(int n) {
         x = n;
         next = NULL;
     }
@@ -43,79 +87,100 @@ struct Node
  * List
  * 
  * Description:
- *      Class use different way to perform on list
+ *      A simple singly linked list class
  * 
  * Public Methods:
- *      - void push
- *      - void insert
- *      - void printTail
- *      - void print
- *      - int pop
+ *                      List() 
+ *      void            Push(int val)
+ *      void            Insert(int val) 
+ *      void            PrintTail()
+ *      string          Print()
+ *      int             Pop()
+ *      List            operator+(const List &Rhs)
+ *      int             operator[](int index)
+ *      friend ostream  &operator<<(ostream &os, List L)
+ *      
  * Private Methods:
- *      NONE
+ *      Node        *Head;
+ *      Node        *Tail;
+ *      int         Size;
  * 
  * Usage: 
  * 
- *      list List1
- *      list1.push(4);
- *      list1.print():
- *      
+ *      List L1,L2          //creates 2 lists of integers
+ *      L1.Push(5)          //pushes 5 onto the end of the list 
+ *      L1.Insert(23)       //inserts 23 before the head of the list
+ *      L1.Pop()            //removes tail value from list
+ *      L1.PrintTail()      //prints the value at the last node of the list
+ *      L1.Print()          //Prints the list
+ *      List L3 = L1 + L2   //makes a new list where the values of the right
+ *                          // list is added to the tail of the left list
+ *      List L1[3]          //gets the value in the 3rd position in the list
+ *      cout << L1          //prints all the values in that list in order
+ * 
  */
-class List
-{
-  private:
-    Node *Head;
-    Node *Tail;
-    int Size;
+class List {
+private:
+    Node *Head;     //node pointer for head of list
+    Node *Tail;     //node pointer for tail of list
+    int Size;       //int for size of list
 
-  public:
-    List()
-    {
+public:
+    /**
+     * Public: List()
+     * 
+     * Description:
+     *      Default constructor that makes a list of NULL and sets size to 0
+     * 
+     * Params:
+     *      None
+     * 
+     * Returns:
+     *      None
+     */
+    List() {
         Head = Tail = NULL;
         Size = 0;
     }
-/**
- * Push
- * Description:
- *     Adds an integer value to the list 
- *
- * Params:
- *     int val  : int a value to be added
- *
- * Returns:
- *     
- */
-    void Push(int val)
-    {
+
+    /**
+     * Public: Push(int val)
+     * 
+     * Description:
+     *      Pushes a value to the end of the list
+     * 
+     * Params:
+     *      int val     //a value to put into the node
+     * 
+     * Returns:
+     *      None
+     */
+    void Push(int val) {
         // allocate new memory and init node
         Node *Temp = new Node(val);
 
-        if (!Head && !Tail)
-        {
+        if (!Head && !Tail) {
             Head = Tail = Temp;
-        }
-        else
-        {
+        } else {
             Tail->next = Temp;
             Tail = Temp;
         }
         Size++;
     }
-/**
- * Public : Insert
- * 
- * Description:
- *      integer a value in the list
- * 
- * Params:
- *      - int val
- *      value to be added to the list
- * 
- * Returns:
- *      
- */
-    void Insert(int val)
-    {
+
+    /**
+     * Public: Insert(int val)
+     * 
+     * Description:
+     *      Describe the functions purpose
+     * 
+     * Params:
+     *      int val     //a value to put into the node
+     * 
+     * Returns:
+     *      None
+     */
+    void Insert(int val) {
         // allocate new memory and init node
         Node *Temp = new Node(val);
 
@@ -123,49 +188,46 @@ class List
 
         Temp->next = Head;
         Head = Temp;
-        if (!Tail)
-        {
+        if (!Tail) {
             Tail = Head;
         }
         Size++;
     }
- /**
-  * Public : PrintTail
-  * 
-  * Description:
-  *      Print value at the end
-  * 
-  * Params:
-  *      
-  * 
-  * Returns:
-  *    
-  */
-    void PrintTail()
-    {
+
+    /**
+     * Public: PrintTail()
+     * 
+     * Description:
+     *      Prints the tail value
+     * 
+     * Params:
+     *      None
+     * 
+     * Returns:
+     *      none
+     */
+    void PrintTail() {
         cout << Tail->x << endl;
     }
-/**
- * Public: Print
- *
- * Description:
- *      Prints the contents of the list
- * 
- * Params:
- *
- *     Void
- *
- * Returns:
- *
- *     List      :  a linked list 
- */
-    string Print()
-    {
+
+    /**
+     * Public/Private/Protected : function_name
+     * 
+     * Description:
+     *      creates a string that has all of the values of the list in it
+     *      so that it can be printed
+     * 
+     * Params:
+     *      None
+     * 
+     * Returns:
+     *      string  :   a string of values from the list
+     */
+    string Print() {
         Node *Temp = Head;
         string list;
 
-        while (Temp != NULL)
-        {
+        while (Temp != NULL) {
             list += to_string(Temp->x) + "->";
             Temp = Temp->next;
         }
@@ -173,37 +235,38 @@ class List
         return list;
     }
 
-    // not implemented 
- /**
- * Pop
- * Description:
- *     Removes a value from the list
- * Params:
- *     
- * Returns:
- *    int      : int value
- */
-    int Pop()
-    {
+    /**
+     * Public: Pop()
+     * 
+     * Description:
+     *      removes the tail node from the list
+     * 
+     * Params:
+     *      None
+     * 
+     * Returns:
+     *      Int :   the value in the removed node
+     */
+    // not implemented
+    int Pop() {
         Size--;
         return 0; //
     }
-/**
- * Public : operator+
- * 
- * Description:
- *      connect two lists
- * 
- * Params:
- *      - const list &Rhs
- *      
- * 
- * Returns:
- *      - List: a new list
- * 
-*/
-    List operator+(const List &Rhs)
-    {
+
+    /**
+     * Public: operator+(const List &Rhs)
+     * 
+     * Description:
+     *      allowes user to combine 2 lists into a single list
+     * 
+     * Params:
+     *      const List       &Rhs
+     * 
+     * Returns:
+     *      List    :   Returns a list that has the head of the right list
+     *                  attached to the tail of the left list
+     */
+    List operator+(const List &Rhs) {
         // Create a new list that will contain both when done
         List NewList;
 
@@ -211,8 +274,7 @@ class List
         Node *Temp = Head;
 
         // Loop through local list and Push values onto new list
-        while (Temp != NULL)
-        {
+        while (Temp != NULL) {
             NewList.Push(Temp->x);
             Temp = Temp->next;
         }
@@ -221,8 +283,7 @@ class List
         Temp = Rhs.Head;
 
         // Same as above, loop and push
-        while (Temp != NULL)
-        {
+        while (Temp != NULL) {
             NewList.Push(Temp->x);
             Temp = Temp->next;
         }
@@ -231,66 +292,76 @@ class List
         return NewList;
     }
 
+    /**
+     * Public: operator[](int index)
+     * 
+     * Description:
+     *      This method allows the user to get the value at a position 
+     *      in the list
+     * 
+     * Params:
+     *      int     index
+     * 
+     * Returns:
+     *      int :   This function returns the int value at a given index
+     */
     // Implementation of [] operator.  This function returns an
     // int value as if the list were an array.
- /**
-  * Public : operator[]
-  * 
-  * Description:     
-  *      int value to the list in an array.
-  * 
-  * Params:int index
-  * Returns: int: index         
-  */    
-    int operator[](int index)
-    {
+    int operator[](int index) {
         Node *Temp = Head;
 
-        if (index >= Size)
-        {
+        if (index >= Size) {
             cout << "Index out of bounds, exiting";
             exit(0);
-        }
-        else
-        {
+        } else {
 
-            for (int i = 0; i < index; i++)
-            {
+            for (int i = 0; i < index; i++) {
                 Temp = Temp->next;
             }
             return Temp->x;
         }
     }
 
-    friend ostream &operator<<(ostream &os, List L)
-    {
+    /**
+     * Friend : ostream &operator<<(ostream &os, List L)
+     * 
+     * Description:
+     *      allows the user to output the list with os commands 
+     *      like cout << L1;
+     * 
+     * Params:
+     *      ostream     &os
+     *      List        L
+     * 
+     * Returns:
+     *      ostream :   returns the string made from print to be used 
+     *                  with the '<<' operator
+     */
+    friend ostream &operator<<(ostream &os, List L) {
         os << L.Print();
         return os;
     }
 };
 
-int main(int argc, char **argv)
-{
-    List L1;
+int main(int argc, char **argv) {
+    List L1;                            //makes 2 lists to store ints
     List L2;
 
-    for (int i = 0; i < 25; i++)
-    {
-        L1.Push(i);
+    for (int i = 0; i < 25; i++) {
+        L1.Push(i);                     //pushes 1-24 to list 1
     }
 
-    for (int i = 50; i < 100; i++)
-    {
-        L2.Push(i);
+    for (int i = 50; i < 100; i++) {
+        L2.Push(i);                     //pushes 50-99 to list 2
     }
 
     //cout << L1 << endl;
-    L1.PrintTail();
-    L2.PrintTail();
+    L1.PrintTail();                     //prints tail of list 1
+    L2.PrintTail();                     //prints tail of list 2
 
-    List L3 = L1 + L2;
-    cout << L3 << endl;
+    List L3 = L1 + L2;                  //combines both lists
+    cout << L3 << endl;                 //outputs combined list
 
-    cout << L3[5] << endl;
+    cout << L3[5] << endl;              //outputs position 5 in combined list
     return 0;
 }
