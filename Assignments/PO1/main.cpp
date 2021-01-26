@@ -1,3 +1,18 @@
+///////////////////////////////////////////////////////////////////////////////
+//                   
+// Author:           YI ZHANG
+// Email:            zy19950301@126.com
+// Label:            PO1
+// Title:            Resizing the Stack
+// Course:           3013-alg
+// Semester:         Spring 2020
+//
+// Description:  Overview the class,Resizing an array of stack, and pop push 
+//               it check it full or empty
+//       
+//
+// Files:  main.cpp          
+/////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include <fstream>
 
