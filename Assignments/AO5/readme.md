@@ -4,9 +4,9 @@
 
 -----
 
-- Count = _____________________
+- Count = 1048576
   
-- Complexity = ________________
+- Complexity = O(n^2) 
   
 ```cpp
 int count = 0;
@@ -21,9 +21,9 @@ cout<<count<<endl;
 
 -----
 
-- Count = _____________________
+- Count = 523776
   
-- Complexity = ________________
+- Complexity = O(n^2)
   
 ```cpp
 int count = 0;
@@ -38,9 +38,9 @@ cout<<count<<endl;
 
 -----
 
-- Count = _____________________
+- Count = 536346624
   
-- Complexity = ________________
+- Complexity = O(n^3)
   
 ```cpp
 int count = 0;
@@ -57,9 +57,9 @@ cout<<count<<endl;
 
 -----
 
-- Count = _____________________
+- Count = 2048
   
-- Complexity = ________________
+- Complexity = O(n)
   
 ```cpp
 int count=0;
@@ -72,9 +72,9 @@ cout<<count<<endl;
 
 -----
 
-- Count = _____________________
+- Count = 2097152
   
-- Complexity = ________________
+- Complexity = O(n^2)
   
 ```cpp
 int count=0;
@@ -89,9 +89,9 @@ cout<<count<<endl;
 
 -----
 
-- Count = _____________________
+- Count = 524800
   
-- Complexity = ________________
+- Complexity =  O(n^2)
   
 ```cpp
 int count=0;
@@ -109,9 +109,9 @@ cout<<count<<endl;
 
 -----
 
-- Count = _____________________
+- Count = 11264
   
-- Complexity = ________________
+- Complexity = O(n log n)
   
 ```cpp
 int count = 0;
@@ -130,9 +130,9 @@ cout<<count<<endl;
 
 -----
 
-- Comparisons = _______________
+- Comparisons = 10
   
-- Complexity = ________________
+- Complexity = O(log n)
   
 ```cpp
 bool found = 0;
@@ -151,9 +151,9 @@ found = BinarySearch(A,n);
 
 -----
 
-- Count = _____________________
+- Count = 0
   
-- Complexity = ________________
+- Complexity = O(log n)
   
 ```cpp
 int count = 0;
