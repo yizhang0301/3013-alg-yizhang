@@ -1,3 +1,17 @@
+///////////////////////////////////////////////////////////////////////////////
+//                   
+// Author:           YI ZHANG
+// Email:            zy19950301@126.com
+// Label:            PO3
+// Title:            Resizing the Stack
+// Course:           3013-alg
+// Semester:         Spring 2021
+//
+// Description:   A binary search tree help to search animals name and show how many it has
+//       
+//
+// Files:  main.cpp          
+/////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include <time.h>
 #include <chrono>
